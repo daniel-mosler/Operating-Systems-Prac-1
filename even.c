@@ -4,11 +4,11 @@
 #include <signal.h>
 
 void HUP_reaction(int sig){
-    printf("Ouch!\n");
+    printf("\nOuch!\n");
 }
 
 void INT_reaction(int sig){
-    printf("Yeah!\n");
+    printf("\nYeah!\n");
 }
 
 int main(int argc, char *argv[]){
