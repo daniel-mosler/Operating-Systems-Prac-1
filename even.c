@@ -4,11 +4,11 @@
 #include <signal.h>
 
 void HUP_reaction(int sig){
-    printf("\nOuch!\n");
+    printf("Ouch!\n");
 }
 
 void INT_reaction(int sig){
-    printf("\nYeah!\n");
+    printf("Yeah!\n");
 }
 
 int main(int argc, char *argv[]){
@@ -17,8 +17,8 @@ int main(int argc, char *argv[]){
     int n = atoi(argv[1]);
 
     //set up signal handlers
-    signal(SIGINT, INT_reaction);
-    signal(SIGHUP, HUP_reaction);
+    sigaction(SIGINT, INT_reaction);
+    sigaction(SIGHUP, HUP_reaction);
 
     //print the first n even numbers
     for (int i = 0; i < n; i++){
