@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
     signal(SIGHUP, HUP_reaction);
 
     //print the first n even numbers
-    for (int i = 1; i <= n; i++){
+    for (int i = 0; i <= n; i++){
             printf("%d\n", i * 2);
             sleep(5);
     }
